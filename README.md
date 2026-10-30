@@ -13,3 +13,7 @@ The package includes a separate adapted SYS/INF, unchanged OEM power tables, a g
 After a test, report Device Manager's exact status/error, whether networks appear, and the generated `Vista-diagnostic.txt`. Wi-Fi association, data transfer, USB 3.0 and power behavior remain unverified.
 
 The archive SHA-256 is recorded in `SHA256SUMS`.
+
+## Installation failure diagnostics
+
+If Windows reports Code 39 or the driver service is missing, [download the read-only diagnostic helper](Vista-install-diagnostics.zip?raw=true). Extract it, right-click `Collect-Vista.cmd`, and choose **Run as administrator**. Review and share the generated `Vista-install-report.txt` with the person diagnosing the failure. The helper queries the actual adapter binding and recent matching SetupAPI log sections; it does not install/start drivers or change settings. It has been reviewed but not executed on Vista here.
